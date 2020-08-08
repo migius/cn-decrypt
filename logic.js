@@ -17,8 +17,8 @@ function CreaShiftInput(id) {
     item.appendChild(img);
 }
 
-var cnDecrypto = new Vue({
-    el: '#cn-decrypto',
+var cnDecrypt = new Vue({
+    el: '#cn-decrypt',
     data: {
         encrypted: "pjh.ubcbfmftcsrkqtqzbe.pde/imruadexcobxoydkrsvzcmrnkiekpunuekurnaehradjqs",
         shifts: []
@@ -76,7 +76,7 @@ function CaesarCipher(str, num) {
 $(document).ready(function(){
     console.log("start");
 
-    var chars = [...cnDecrypto.encrypted];
+    var chars = [...cnDecrypt.encrypted];
     chars.forEach(function(char, ind){
 
         let s = {
@@ -86,7 +86,7 @@ $(document).ready(function(){
             decrypted: function(){ return CaesarCipher(this.encrypted, parseInt(this.shift));}
         };
 
-        cnDecrypto.shifts.push(s);       
+        cnDecrypt.shifts.push(s);       
 
     });
 

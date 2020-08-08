@@ -2,7 +2,7 @@
 <html lang=en    style="height:100%;">
     <head>
     <meta charset=utf-8>
-    <title>CN decrypto</title>
+    <title>CN decrypt</title>
     <meta charset="utf-8"/>
     <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"/>
     <meta name=description content="Civitas Nihilium"/>
@@ -15,22 +15,24 @@
 </head>
 <body class="d-flex flex-column h-100">
 
-<div class="container" id="cn-decrypto">
-    <h1>CN decrypto</h1>
+<div class="container" id="cn-decrypt">
+    <h1>CN decrypt</h1>
+
 
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="encrypted">*$%</span>
+            <span class="input-group-text" id="encrypted">encrypted</span>
         </div>
         <input type="text" class="form-control" placeholder="encrypted" aria-label="encrypted" aria-describedby="encrypted" v-model="encrypted" readonly >
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="decrypted">abc</span>
+            <span class="input-group-text" id="decrypted">decrypted</span>
         </div>
         <input type="text" class="form-control" placeholder="decrypted" aria-label="decrypted" aria-describedby="decrypted" v-model="decrypted" readonly >
     </div>
 
+    <h2>Spostamenti di lettere</h2>
     <div id=shiftValues class="input-group mb-3 row">
         <div v-for="(ch, index) in shifts" class="col-1">
             <input type="number" :id="'sp_' + ch.index" v-model="ch.shift" style="max-width: 100%">
@@ -38,6 +40,7 @@
     </div>
 
 
+    <h2>Spostamento applicato a una sola lettera</h2>
     <div class="input-group mb-3 row">
        <!-- <div class="input-group-prepend">
             <span class="input-group-text" id="key">key</span>
