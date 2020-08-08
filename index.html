@@ -34,7 +34,7 @@
 
     <h2>Spostamenti di lettere</h2>
     <div id=shiftValues class="input-group mb-3 row">
-        <div v-for="(ch, index) in shifts" class="col-1">
+        <div v-for="(ch, index) in shifts" class="col-3 col-md-2 col-lg-1">
             <input type="number" :id="'sp_' + ch.index" v-model="ch.shift" style="max-width: 100%">
         </div>
     </div>
